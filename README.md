@@ -30,9 +30,9 @@ Additionally, if a chunk does not yet have a parser, a small hexdump of the firs
 This will also occur if there is extra data at the end of the file that is not accounted for by the RIFF size header. Unless the extra data is another WAVE file, in this case it will be parsed like a normal file and it's details will be appended after the current file's info, along with a message indicationg it as a concatenated wav.
 
 ## sample output screenshots:
-![screenshot_01_single_sample](images/screenshot_01_single_sample.png)
-![screenshot_02_ixml_dump](images/screenshot_02_ixml_dump.png)
-![screenshot_03_junk_dump](images/screenshot_03_junk_dump.png)
+![screenshot_01_single_sample](screenshots/screenshot_01_single_sample.png)
+![screenshot_02_ixml_dump](screenshots/screenshot_02_ixml_dump.png)
+![screenshot_03_junk_dump](screenshots/screenshot_03_junk_dump.png)
 
 ## usage:
     vwavi.py [-h] [--raw] [--no-border] [--pickle] WAV_FILE_OR_FOLDER [WAV_FILE_OR_FOLDER ...]
