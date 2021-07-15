@@ -350,7 +350,7 @@ def chunks_parser(wav_file, info):
                 'true_size': (t_size := size - (chunk_info['data_end_offset'] - info['file_size'])),
                 'true_data_end_offset': data_offset + t_size
             })
-            if size % 2 == 0 or chunk_info['true_data_end_offset'] - info['file_size'] != 1:
+            if chunk_info['data_end_offset'] - chunk_info['true_data_end_offset'] > 1:
                 chunk_info['error_bitmask'] |= Errors.TRUNCATED
         else:
             chunk_info['true_size'] = size
